@@ -1,0 +1,8 @@
+Project Title,Research Area Alignment,Complexity_Score,Duration_Weeks,Tool_Requirements,Data_Availability,Industry_Relevance,Publication_Potential
+Delhi Taxi Stay Point Analysis,Spatial Informatics + AI/ML,6,4,"Python, QGIS, GPS data",8,9,8
+Hospital Accessibility Assessment,Community Studies + Spatial Informatics,4,3,"QGIS, Network Analysis",9,8,7
+Road Safety Hotspot Mapping,Road Safety + Spatial Informatics,5,4,"QGIS, Statistical analysis",7,9,9
+Emergency Services Route Optimization,Road Safety + Spatial Informatics,7,5,"Python, Routing APIs",6,8,7
+Transit Network Coverage Analysis,Community Studies + Spatial Informatics,5,4,"QGIS, GTFS data",9,7,6
+Road Infrastructure Resilience Assessment,Road Resilience + Sustainability,6,5,"QGIS, Resilience metrics",5,8,7
+Behavioral Travel Pattern Study,Behavioral Studies + Cognitive Science,8,6,"Survey tools, Statistical analysis",4,6,8

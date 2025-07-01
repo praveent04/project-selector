@@ -1,0 +1,30 @@
+
+QUICK REFERENCE SHEET
+====================
+
+TOP RECOMMENDATION: Hospital Accessibility Assessment
+- Duration: 3-4 weeks
+- Tools: QGIS + OpenStreetMap data
+- Alignment: Professor's emergency medical services research
+- Data: Freely available from Delhi Open Data Portal
+
+WEEK 1: Data collection and QGIS setup
+WEEK 2: Network analysis and service areas  
+WEEK 3: Accessibility calculations and mapping
+WEEK 4: Documentation and presentation
+
+Key Learning: 
+- QGIS Network Analyst (2-3 days to learn)
+- Basic spatial analysis concepts
+- Academic report writing
+
+Expected Output:
+- Accessibility coverage maps
+- Underserved area identification
+- Policy recommendations for Delhi government
+- 15-20 page technical report
+
+Professor Alignment:
+- Extends Ahuja et al. (2020) emergency medical services research
+- Uses spatial informatics methodology 
+- Community and behavioral studies applications

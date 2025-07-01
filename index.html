@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportation Safety Term Project Selection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Screen -->
+        <section id="welcome-screen" class="screen active">
+            <div class="welcome-header">
+                <h1>Term Project Selection Portal</h1>
+                <p class="welcome-subtitle">Transportation & Safety Engineering Projects</p>
+                <div class="professor-info card">
+                    <div class="card__body">
+                        <h3>Professor R. Ahuja</h3>
+                        <p>Select projects aligned with cutting-edge research in transportation safety and spatial informatics</p>
+                        <div class="research-areas">
+                            <h4>Research Areas:</h4>
+                            <div class="area-tags">
+                                <span class="status status--info">Road Safety</span>
+                                <span class="status status--success">Community & Behavioral Studies</span>
+                                <span class="status status--warning">Spatial Informatics</span>
+                                <span class="status status--error">AI, ML, Cognitive Science</span>
+                                <span class="status status--info">Road Resilience & Sustainability</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn--primary btn--lg" onclick="showProjectSelection()">Browse Projects</button>
+            </div>
+        </section>
+
+        <!-- Project Selection Interface -->
+        <section id="project-selection" class="screen">
+            <div class="section-header">
+                <h2>Project Selection</h2>
+                <p>Choose from 7 carefully curated projects designed for 1-1.5 month completion</p>
+                <button class="btn btn--secondary" onclick="showWelcome()">← Back to Welcome</button>
+            </div>
+
+            <!-- Filters and Controls -->
+            <div class="controls-panel card">
+                <div class="card__body">
+                    <div class="filters-grid">
+                        <div class="form-group">
+                            <label class="form-label">Duration (weeks)</label>
+                            <select id="duration-filter" class="form-control">
+                                <option value="">All durations</option>
+                                <option value="3">3 weeks</option>
+                                <option value="4">4 weeks</option>
+                                <option value="5">5 weeks</option>
+                                <option value="6">6 weeks</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Complexity (1-10)</label>
+                            <select id="complexity-filter" class="form-control">
+                                <option value="">All complexity levels</option>
+                                <option value="4">4 - Beginner</option>
+                                <option value="5">5 - Easy</option>
+                                <option value="6">6 - Medium</option>
+                                <option value="7">7 - Advanced</option>
+                                <option value="8">8 - Expert</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Research Area</label>
+                            <select id="area-filter" class="form-control">
+                                <option value="">All areas</option>
+                                <option value="Road Safety">Road Safety</option>
+                                <option value="Community Studies">Community Studies</option>
+                                <option value="Spatial Informatics">Spatial Informatics</option>
+                                <option value="AI/ML">AI/ML</option>
+                                <option value="Road Resilience">Road Resilience</option>
+                                <option value="Behavioral Studies">Behavioral Studies</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Sort by</label>
+                            <select id="sort-select" class="form-control">
+                                <option value="alignment">Alignment Score</option>
+                                <option value="duration">Duration</option>
+                                <option value="complexity">Complexity</option>
+                                <option value="title">Title</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-actions">
+                        <button class="btn btn--secondary btn--sm" onclick="clearAllFilters()">Clear Filters</button>
+                        <span class="filter-results">Showing <span id="project-count">7</span> projects</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Matrix Visualization -->
+            <div class="matrix-visualization card">
+                <div class="card__body">
+                    <h3>Project Complexity Matrix</h3>
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1751407547/pplx_code_interpreter/aec7d945_u8kuh9.jpg" alt="Project Selection Matrix" class="matrix-chart">
+                    <p class="chart-caption">Duration vs Complexity analysis showing optimal projects for 1-1.5 month completion</p>
+                </div>
+            </div>
+
+            <!-- Project Cards Grid -->
+            <div id="projects-grid" class="projects-grid">
+                <!-- Project cards will be populated by JavaScript -->
+            </div>
+
+            <!-- Comparison Panel -->
+            <div id="comparison-panel" class="comparison-panel card" style="display: none;">
+                <div class="card__body">
+                    <div class="flex justify-between items-center">
+                        <h3>Project Comparison (<span id="comparison-count">0</span>/3)</h3>
+                        <div class="comparison-actions">
+                            <button class="btn btn--primary" onclick="showComparison()" id="compare-btn" disabled>Compare Projects</button>
+                            <button class="btn btn--secondary" onclick="clearComparison()">Clear All</button>
+                        </div>
+                    </div>
+                    <div id="selected-projects" class="selected-projects">
+                        <!-- Selected projects for comparison -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Comparison Screen -->
+        <section id="comparison-screen" class="screen">
+            <div class="section-header">
+                <h2>Project Comparison</h2>
+                <button class="btn btn--secondary" onclick="showProjectSelection()">← Back to Projects</button>
+            </div>
+            <div id="comparison-table-container">
+                <!-- Comparison table will be generated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Detailed Project View -->
+        <section id="project-detail" class="screen">
+            <div class="section-header">
+                <button class="btn btn--secondary" onclick="showProjectSelection()">← Back to Projects</button>
+            </div>
+            <div id="project-detail-content">
+                <!-- Project details will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Quick Start Guide -->
+        <section id="quick-start" class="screen">
+            <div class="section-header">
+                <h2>Quick Start Guide</h2>
+                <button class="btn btn--secondary" onclick="showProjectDetail()">← Back to Project</button>
+            </div>
+            <div id="quick-start-content">
+                <!-- Quick start guide will be populated by JavaScript -->
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
